@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import CreateExercise from './components/CreateExercise';
 import Workouts from './components/Workouts';
@@ -9,13 +8,13 @@ function App() {
   const [userData, setUserData] = useState({});
 
   useEffect(() => {
-    setUserData(getUser());
+    setUserData(JSON.parse(getUser()));
     console.log(getUser());
   }, []);
 
   return (
     <div id="app">
-      <p> {userData.user} Logged In</p>
+      <p> {userData.name} Logged In</p>
       <CreateExercise />
       <Workouts />
     </div>
