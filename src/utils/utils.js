@@ -1,5 +1,6 @@
 export const getUser = () => {
   const storage = window.localStorage;
+
   const testData = { name: 'testUser' };
   const localUser = storage.getItem('user');
 
